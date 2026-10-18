@@ -1,0 +1,63 @@
+/* Chat Widget Component */
+.chat-widget {
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  z-index: var(--z-modal);
+  animation: chat-bounce 2s infinite;
+}
+
+.chat-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-16);
+  height: var(--space-16);
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  border: var(--border-width) solid var(--color-border);
+}
+
+.chat-button:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-accent-orange);
+}
+
+.chat-cheese-icon {
+  width: var(--space-10);
+  height: var(--space-10);
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes chat-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chat-widget {
+    bottom: var(--space-3);
+    right: var(--space-3);
+  }
+
+  .chat-button {
+    width: var(--space-14);
+    height: var(--space-14);
+  }
+
+  .chat-cheese-icon {
+    width: var(--space-8);
+    height: var(--space-8);
+  }
+}

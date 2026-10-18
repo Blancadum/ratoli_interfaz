@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Papelería Ratolí</title>
+    <link rel="stylesheet" href="../../src/styles/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div id="aside-placeholder"></div>
+    <div id="mobile-nav-placeholder"></div>
+    
+    <div class="blog-container">
+        
+        <div class="blog-header">
+            <h1>Blog de Ratolí</h1>
+            <p style="color: #666; margin-bottom: 25px;">Consejos, tutoriales e ideas inspiradoras para desatar tu creatividad.</p>
+            
+            <div class="blog-search-wrapper">
+                <span class="blog-search-icon">🔍</span>
+                <!-- Buscador Inteligente en Frontend -->
+                <input type="text" id="blogSearchInput" class="blog-search-input" placeholder="Buscar por palabra clave (ej: lettering, EBAU, compás)...">
+            </div>
+        </div>
+
+        <div class="blog-grid" id="blogGrid">
+            
+            <!-- Entrada 1 -->
+            <article class="blog-card" data-keywords="rotuladores lettering acuarelas manualidades arte">
+                <a href="mejores-rotuladores-lettering.html" style="text-decoration:none;">
+                    <img src="../../assets/images/tienda/manualidades/pinturas-acuarelas/pinturas.png" alt="Lettering" class="blog-img" style="object-fit:contain; padding:20px; background:#f9f9f9;">
+                    <div class="blog-content">
+                        <span class="blog-date">12 Septiembre 2026</span>
+                        <h3 class="blog-title">Los 5 mejores rotuladores para iniciarse en el Lettering</h3>
+                        <p class="blog-excerpt">Descubre qué rotuladores con punta de pincel son ideales para empezar a dibujar letras sin frustraciones.</p>
+                        <span class="blog-read-more">Leer artículo →</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Entrada 2 -->
+            <article class="blog-card" data-keywords="calculadora ebau selectividad tecnologia instituto">
+                <a href="calculadora-ebau.html" style="text-decoration:none;">
+                    <img src="../../assets/images/tienda/calculadora-basica.png" alt="Calculadora EBAU" class="blog-img" style="object-fit:contain; padding:20px; background:#f9f9f9;">
+                    <div class="blog-content">
+                        <span class="blog-date">05 Septiembre 2026</span>
+                        <h3 class="blog-title">¿Qué calculadora científica puedes llevar a la EBAU?</h3>
+                        <p class="blog-excerpt">Resolvemos la eterna duda: te contamos qué modelos de calculadoras no programables están 100% permitidos este año.</p>
+                        <span class="blog-read-more">Leer artículo →</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Entrada 3 -->
+            <article class="blog-card" data-keywords="mochilas vuelta al cole ergonomía infantil material">
+                <a href="dudas-vuelta-al-cole.html" style="text-decoration:none;">
+                    <img src="../../assets/images/tienda/mochila.png" alt="Mochilas" class="blog-img" style="object-fit:contain; padding:20px; background:#f9f9f9;">
+                    <div class="blog-content">
+                        <span class="blog-date">28 Agosto 2026</span>
+                        <h3 class="blog-title">Cómo elegir la mochila perfecta para no dañar la espalda</h3>
+                        <p class="blog-excerpt">La ergonomía es clave. Aprende a calcular el peso máximo que debe llevar un niño y cómo ajustar las correas correctamente.</p>
+                        <span class="blog-read-more">Leer artículo →</span>
+                    </div>
+                </a>
+            </article>
+            
+            <!-- Entrada 4 -->
+            <article class="blog-card" data-keywords="compás dibujo técnico reglas escuadra cartabón arquitectura">
+                <a href="material-dibujo-tecnico.html" style="text-decoration:none;">
+                    <img src="../../assets/images/tienda/material-escolar/reglas-compases/reglas-compases.png" alt="Compases" class="blog-img" style="object-fit:contain; padding:20px; background:#f9f9f9;">
+                    <div class="blog-content">
+                        <span class="blog-date">10 Agosto 2026</span>
+                        <h3 class="blog-title">Guía de material imprescindible para Dibujo Técnico</h3>
+                        <p class="blog-excerpt">Desde el compás de precisión con bigotera hasta las escuadras sin bisel. Prepara tu estuche de arquitectura al completo.</p>
+                        <span class="blog-read-more">Leer artículo →</span>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+
+    </div>
+    
+    <div id="footer-placeholder"></div>
+    <script src="../../src/scripts/app.js"></script>
+
+    <!-- Script de Buscador Inteligente -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('blogSearchInput');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            searchInput.addEventListener('keyup', (e) => {
+                const term = e.target.value.toLowerCase().trim();
+                
+                blogCards.forEach(card => {
+                    // Busca tanto en el atributo oculto de keywords como en el título de la tarjeta
+                    const keywords = card.getAttribute('data-keywords').toLowerCase();
+                    const title = card.querySelector('.blog-title').textContent.toLowerCase();
+                    
+                    if (keywords.includes(term) || title.includes(term)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

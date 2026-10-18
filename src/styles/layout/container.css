@@ -1,0 +1,39 @@
+/* Layout Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  width: 100%;
+}
+
+.container--fluid {
+  width: 100%;
+  padding: 0 var(--space-4);
+}
+
+.container--narrow {
+  max-width: 800px;
+}
+
+.container--wide {
+  max-width: 1400px;
+}
+
+/* Section spacing */
+.section {
+  padding: var(--space-12) 0;
+}
+
+.section--sm { padding: var(--space-6) 0; }
+.section--md { padding: var(--space-8) 0; }
+.section--lg { padding: var(--space-16) 0; }
+.section--xl { padding: var(--space-20) 0; }
+
+/* Gutters */
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+.gap-12 { gap: var(--space-12); }

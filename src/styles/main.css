@@ -1,0 +1,34 @@
+/* ==========================================================
+   MAIN.CSS - Punto de entrada de estilos
+   Importa todos los módulos en orden de dependencia
+   ========================================================== */
+
+/* 1. Design Tokens (variables) */
+@import './tokens.css';
+
+/* 2. Reset & Base */
+@import './reset.css';
+@import './base.css';
+
+/* 3. Layout */
+@import './layout/container.css';
+@import './layout/grid.css';
+
+/* 4. Components */
+@import './components/button.css';
+@import './components/form.css';
+@import './components/card.css';
+@import './components/header.css';
+@import './components/nav.css';
+@import './components/footer.css';
+@import './components/chat-widget.css';
+@import './components/hero.css';
+@import './components/feature-card.css';
+
+/* 5. Utilities */
+@import './utilities/sr-only.css';
+@import './utilities/helpers.css';
+
+/* 6. Page-specific (solo lo estrictamente necesario) */
+@import './pages/home.css';
+@import './pages/style-guide.css';

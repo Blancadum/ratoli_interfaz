@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papereria Ratolí - Material Escolar, Joguines Educatives i Manualitats</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-link">
+                    <img src="/assets/images/tienda/ratoli.png" alt="Il·luxió de ratolí" class="logo-img">
+                    <span class="logo-text">Papereria Ratolí</span>
+                </a>
+            </div>
+
+            <!-- Search -->
+            <form class="search-form" action="/search" method="GET" role="search">
+                <label for="search-input" class="sr-only">Cercar productes</label>
+                <input type="search" id="search-input" name="q" placeholder="Busques colors, contes, motxilles...?" aria-label="Cercador de productes">
+                <button type="submit" aria-label="Buscar">🔍</button>
+            </form>
+
+            <!-- User Actions -->
+            <div class="user-actions">
+                <select id="lang-select" class="lang-select" aria-label="Seleccionar idioma">
+                    <option value="ca">CA</option>
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+                <button id="theme-toggle" class="theme-btn" aria-label="Canviar mode diürn/nocturn">🌙</button>
+                <a href="/cart" class="cart-icon" aria-label="Veure cistella de la compra">🛒 <span class="cart-count">0</span></a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Obrir menú de navegació" aria-expanded="false" aria-controls="main-nav" title="Menú principal">☰</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <article class="hero-banner">
+                    <h2>¡Tornada a l'escola amb el Ratolí! 🎒</h2>
+                    <p>Aconsegueix un 20% de descompte en tot el material de papereria i motxilles divertides.</p>
+                    <a href="/shop" class="cta-button">Comprar ara!</a>
+                </article>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🚀</div>
+                    <h3>Enviament ràpid</h3>
+                    <p>Rebutja les esperes: enviament a casa en 24/48 hores.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎨</div>
+                    <h3>Material segur</h3>
+                    <p>Productes 100% no tòxics i adaptats per a totes les edats escolars.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎁</div>
+                    <h3>Regals sorpresa</h3>
+                    <p>Obsequi d'un set d'adhesius de ratolí a partir de 25€ de compra.</p>
+                </article>
+            </section>
+
+            <!-- SEO Text -->
+            <section class="seo-text-section">
+                <h2>Papereria Ratolí: Il·lusió i material escolar per créixer</h2>
+                <p>A <strong>Papereria Ratolí</strong> ens apassiona acompanyar als més menuts en la seva aventura educativa. Des de llapis de colors i quaderns fins a jocs educatius i motxilles ergonòmiques, tenim tot el que necessites amb un toc divertit i proper.</p>
+            </section>
+        </main>
+
+        <!-- Chat Widget -->
+        <aside class="chat-widget" aria-label="Xat d'atenció al client">
+            <a href="/chat" class="chat-button" aria-label="Obrir xat amb el Ratolí">🗣️</a>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-branding">
+                    <h2>Papereria Ratolí</h2>
+                </div>
+                <p class="footer-copyright">© 2026 Papereria Ratolí. El racó preferit dels estudants.</p>
+                <ul class="footer-links">
+                    <li><a href="/legal" data-i18n="footer-legal">Avís legal</a></li>
+                    <li><a href="/privacy" data-i18n="footer-privacy">Política de privacitat</a></li>
+                    <li><a href="/contact" data-i18n="footer-contact">Contacte</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" data-i18n="social-google">Google</a>
+                    <a href="#" data-i18n="social-facebook">Facebook</a>
+                    <a href="#" data-i18n="social-instagram">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </header>
+    <main class="main-content">
+        <!-- Hero -->
+        <section class="hero-section">
+            <article class="hero-banner">
+                <h2>¡Tornada a l'escola amb el Ratolí! 🎒</h2>
+                <p>Aconsegueix un 20% de descompte en tot el material de papereria i motxilles divertides.</p>
+                <a href="/shop" class="cta-button">Comprar ara!</a>
+            </article>
+        </section>
+        <!-- Features -->
+        <section class="features-section">
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🚀</div>
+                <h3>Enviament ràpid</h3>
+                <p>Rebutja les esperes: enviament a casa en 24/48 hores.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🎨</div>
+                <h3>Material segur</h3>
+                <p>Productes 100% no tòxics i adaptats per a totes les edats escolars.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🎁</div>
+                <h3>Regals sorpresa</h3>
+                <p>Obsequi d'un set d'adhesius de ratolí a partir de 25€ de compra.</p>
+            </article>
+        </section>
+        <!-- SEO -->
+        <section class="seo-text-section">
+            <h2>Papereria Ratolí: Il·lusió i material escolar per créixer</h2>
+            <p>A <strong>Papereria Ratolí</strong> ens apassiona acompanyar als més menuts en la seva aventura educativa. Des de llapis de colors i quaderns fins a jocs educatius i motxilles ergonòmiques, tenim tot el que necessites amb un toc divertit i proper.</p>
+        </section>
+    </main>
+    <script src="/src/scripts/app.js"></script>
+</body>
+</html>

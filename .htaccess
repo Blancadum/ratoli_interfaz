@@ -1,0 +1,12 @@
+# He dejado preparado un archivo .htaccess de configuración de servidor para garantizar el correcto enrutamiento de la página de error 404 personalizada en entornos de producción.
+RewriteEngine On
+# Evitar que se aplique si el archivo o directorio existe físicamente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Si existe el archivo con .html, redirigir internamente a él
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Manejo de error 404
+ErrorDocument 404 /404.html
